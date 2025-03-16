@@ -64,7 +64,7 @@
 Отже, це все про першу квіткову рослину в космосі. Проводиться ще багато експериментів з вирощування рослин у космосі.</h3>
 <h1>оцініть будьласка я дуже старався бо кода було написано дуже багато :)</h1>
 <h6>створено учнем 6-В класу Хоченкова В'ячеслава інформація взята з платформи гугл та інформація з додатку до підручника а також <a href="https://life.pravda.com.ua/society/2023/07/31/255654/">посилання 1</a> <a href="https://kvitofor.ua/ua/publications/diznajtesya-pro-pershu-kvitku-viroshhenu-v-kosmosi/">посилання 2</a>.</h6> -->
-<<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
@@ -132,7 +132,7 @@
 <h1>Схоже що цей сайт майже ніхто не дивиться. Тому користувач закрив на час прєкт.</h1> <h3>Увага! Якщо там є якась важлива інформація зверніться до користувача!</h3> <h5>Дякую за увагу!</h5>
     </div>
 </body>
-</html>
+</html>-->
 <!--<!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -253,3 +253,217 @@
     </script>
 </body>
 </html>-->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Географічні цікавинки</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7fa; /* Світло-блакитний фон */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            animation: fadeIn 1s ease-in-out; /* Додавання анімації для завантаження сторінки */
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00796b;
+            font-size: 3rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            transition: background-color 0.3s;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        button:hover {
+            background-color: #004d40;
+        }
+
+        .country-info {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .country-info h2 {
+            color: #00796b;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .fact-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .fact-list li {
+            margin: 10px 0;
+            font-size: 18px;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .map-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .map-button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Географічні цікавинка про країни</h1>
+
+        <!-- Кнопки для вибору країни -->
+        <button onclick="showInfo('ukraine')">Україна</button>
+        <button onclick="showInfo('egypt')">Єгипет</button>
+        <button onclick="showInfo('japan')">Японія</button>
+        <button onclick="showInfo('brazil')">Бразилія</button>
+        <button onclick="showInfo('australia')">Австралія</button>
+
+        <!-- Інформація про країну -->
+        <div id="country-info" class="country-info">
+            <h2 id="country-name"></h2>
+            <p id="country-description"></p>
+            <h3>Цікаві факти:</h3>
+            <ul id="fact-list" class="fact-list"></ul>
+            <button class="map-button" onclick="viewOnMap()">Глянути на карті</button>
+        </div>
+    </div>
+
+    <script>
+        // Опис країн
+        const descriptions = {
+            ukraine: "Україна — велика країна в Східній Європі, відома своєю історією, природними пейзажами та багатою культурною спадщиною.",
+            egypt: "Єгипет — країна на північному сході Африки, відома своїми древніми пам'ятками, такими як піраміди та Сфінкс.",
+            japan: "Японія — острівна країна в Східній Азії, славиться своєю культурою, технологіями, а також красивими пейзажами.",
+            brazil: "Бразилія — велика країна в Латинській Америці, відома своєю культурною спадщиною та природними красотами. Найбільше місто Ріо-де-Жанейро відоме своїми карнавалами та пляжами.",
+            australia: "Австралія — острівна країна, відома своєю унікальною фауною та природними ландшафтами. Австралія має чудові пляжі, до яких приїжджають туристи з усього світу."
+        };
+
+        // Цікаві факти про країни
+        const facts = {
+            ukraine: [
+                "Україна є однією з найбільших країн Європи за площею.",
+                "Гірські Карпати — одне з найкрасивіших природних чудес України.",
+                "Київ — одне з найстаріших міст Східної Європи."
+            ],
+            egypt: [
+                "Єгипет є домом для одних з найбільших пірамід у світі.",
+                "Річка Ніл — одна з найдовших річок у світі.",
+                "Єгипет був осередком однієї з найдавніших цивілізацій у світі."
+            ],
+            japan: [
+                "Японія складається з 14 000 островів.",
+                "Токіо — одне з найбільших і найнаселеніших міст світу.",
+                "Японія славиться своїми традиціями та мистецтвом чайної церемонії."
+            ],
+            brazil: [
+                "Бразилія має найбільший тропічний ліс у світі — Амазонку.",
+                "Ріо-де-Жанейро — відоме місто завдяки своїм карнавалам і пляжам.",
+                "Бразилія є найбільшим виробником кави у світі."
+            ],
+            australia: [
+                "Австралія має найбільшу в світі колекцію коралових рифів.",
+                "В Австралії можна знайти унікальних тварин, таких як кенгуру та коала.",
+                "Австралія є однією з найбільших країн-експортерів природних ресурсів."
+            ]
+        };
+
+        // Функція для відображення інформації про країну
+        function showInfo(country) {
+            let countryName = "";
+            let countryDescription = "";
+            let factList = document.getElementById("fact-list");
+
+            // Оновлення інформації
+            if (country === 'ukraine') {
+                countryName = "Україна";
+                countryDescription = descriptions.ukraine;
+            } else if (country === 'egypt') {
+                countryName = "Єгипет";
+                countryDescription = descriptions.egypt;
+            } else if (country === 'japan') {
+                countryName = "Японія";
+                countryDescription = descriptions.japan;
+            } else if (country === 'brazil') {
+                countryName = "Бразилія";
+                countryDescription = descriptions.brazil;
+            } else if (country === 'australia') {
+                countryName = "Австралія";
+                countryDescription = descriptions.australia;
+            }
+
+            // Оновлюємо інтерфейс
+            document.getElementById("country-name").innerText = countryName;
+            document.getElementById("country-description").innerText = countryDescription;
+            document.getElementById("country-info").style.display = "block";
+
+            // Оновлення списку цікавих фактів
+            factList.innerHTML = "";
+            facts[country].forEach(fact => {
+                let listItem = document.createElement("li");
+                listItem.textContent = fact;
+                factList.appendChild(listItem);
+            });
+        }
+
+        // Функція для перегляду на мапі
+        function viewOnMap() {
+            const countriesMap = {
+                ukraine: "https://www.google.com/maps?q=Ukraine",
+                egypt: "https://www.google.com/maps?q=Egypt",
+                japan: "https://www.google.com/maps?q=Japan",
+                brazil: "https://www.google.com/maps?q=Brazil",
+                australia: "https://www.google.com/maps?q=Australia"
+            };
+            const url = countriesMap[document.getElementById("country-name").innerText.toLowerCase()];
+            window.open(url, "_blank");
+        }
+    </script>
+</body>
+</html>
