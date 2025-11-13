@@ -64,7 +64,7 @@
 Отже, це все про першу квіткову рослину в космосі. Проводиться ще багато експериментів з вирощування рослин у космосі.</h3>
 <h1>оцініть будьласка я дуже старався бо кода було написано дуже багато :)</h1>
 <h6>створено учнем 6-В класу Хоченкова В'ячеслава інформація взята з платформи гугл та інформація з додатку до підручника а також <a href="https://life.pravda.com.ua/society/2023/07/31/255654/">посилання 1</a> <a href="https://kvitofor.ua/ua/publications/diznajtesya-pro-pershu-kvitku-viroshhenu-v-kosmosi/">посилання 2</a>.</h6> -->
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
@@ -132,7 +132,7 @@
 <h1>Схоже що цей сайт майже ніхто не дивиться. Тому користувач закрив на час прєкт.</h1> <h3>Увага! Якщо там є якась важлива інформація зверніться до користувача!</h3> <h5>Дякую за увагу!</h5>
     </div>
 </body>
-</html>
+</html> -->
 <!--<!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -468,3 +468,593 @@
     </script>
 </body>
 </html>-->
+
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Чорнобильська АЕС</title>
+</head>
+
+<body class="dark-mode animated-background">
+    <style>
+        :root {
+    /* --- Змінні Кольорів --- */
+    --primary-color: #4CAF50;    /* Основний колір (зелений) */
+    --secondary-color: #2196F3;  /* Додатковий колір (синій) */
+    --text-dark: #212121;        /* Темний текст (для світлого фону) */
+    --text-light: #FAFAFA;       /* Світлий текст (для темного фону) */
+    --background-light: #FFFFFF; /* Світлий фон */
+    --background-dark: #303030;  /* Темний фон */
+    --accent-color: #FFC107;     /* Акцентний колір (попередження/виділення) */
+    --error-color: #F44336;      /* Колір помилок */
+
+    /* --- Змінні Типографіки --- */
+    --font-main: 'Roboto', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-size-base: 16px;
+
+    /* --- Інші Змінні --- */
+    --spacing-unit: 8px;
+    --border-radius: 6px;
+    --transition-speed: 0.3s;
+    --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    /* Змінні для Анімації Фону */
+    --animation-duration: 30s;
+    --animation-size: 200%;
+
+    /* Кольори для СВІТЛОЇ Анімації */
+    --gradient-light-1: #E0F2F1;
+    --gradient-light-2: #B2EBF2;
+    --gradient-light-3: #B9F6CA;
+    --gradient-light-4: #FFF9C4;
+    
+    /* Кольори для ТЕМНОЇ Анімації */
+    --gradient-dark-1: #0D47A1;
+    --gradient-dark-2: #1A237E;
+    --gradient-dark-3: #4A148C;
+    --gradient-dark-4: #004D40;
+}
+
+/* ---------------------------------------------------- */
+/* --- 1. БАЗОВА СТИЛІЗАЦІЯ ТА RESET --- */
+/* ---------------------------------------------------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--text-dark);
+    line-height: 1.2;
+    margin-bottom: calc(var(--spacing-unit) * 2);
+    margin-top: calc(var(--spacing-unit) * 4);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+p { margin-bottom: calc(var(--spacing-unit) * 2); }
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed), border-color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* ---------------------------------------------------- */
+/* --- 2. МАКЕТ ТА КОНТЕЙНЕРИ --- */
+/* ---------------------------------------------------- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 calc(var(--spacing-unit) * 2);
+}
+
+.flex-group {
+    display: flex;
+    gap: var(--spacing-unit);
+    align-items: center;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: calc(var(--spacing-unit) * 3);
+}
+
+/* ---------------------------------------------------- */
+/* --- 3. КНОПКИ --- */
+/* ---------------------------------------------------- */
+.btn {
+    display: inline-block;
+    padding: var(--spacing-unit) calc(var(--spacing-unit) * 3);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    box-shadow: var(--shadow-light);
+}
+
+.btn-primary:hover {
+    background-color: #388E3C;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ---------------------------------------------------- */
+/* --- 4. ФОРМИ --- */
+/* ---------------------------------------------------- */
+.form-group {
+    margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.form-control {
+    width: 100%;
+    padding: calc(var(--spacing-unit) * 1.5);
+    border: 1px solid #E0E0E0;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.form-control.error {
+    border-color: var(--error-color);
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.875rem;
+    margin-top: var(--spacing-unit);
+}
+
+/* ---------------------------------------------------- */
+/* --- 5. КАРТКИ ТА КОМПОНЕНТИ --- */
+/* ---------------------------------------------------- */
+.card {
+    background-color: var(--background-light);
+    border-radius: calc(var(--border-radius) * 2);
+    box-shadow: var(--shadow-light);
+    padding: calc(var(--spacing-unit) * 3);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-unit);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: calc(var(--border-radius) * 2) calc(var(--border-radius) * 2) 0 0;
+    margin: calc(var(--spacing-unit) * -3) calc(var(--spacing-unit) * -3) calc(var(--spacing-unit) * 2);
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-light);
+    background-color: var(--secondary-color);
+    margin-right: var(--spacing-unit);
+}
+
+/* ---------------------------------------------------- */
+/* --- 6. СТИЛІЗАЦІЯ ТАБЛИЦЬ (ВИПРАВЛЕНО КОНТРАСТ) --- */
+/* ---------------------------------------------------- */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    color: var(--text-dark); /* Базовий колір тексту таблиці (темний) */
+}
+
+.styled-table thead tr {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #DDDDDD;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #F3F3F3;
+}
+
+/* !!! КОНТРАСТ: При наведенні робимо фон помітним, а текст темним !!! */
+.styled-table tbody tr:hover {
+    background-color: var(--accent-color); /* Фон при наведенні */
+    color: var(--text-dark); /* Текст темний, щоб було видно */
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+
+/* ---------------------------------------------------- */
+/* --- 7. АНІМАЦІЯ ФОНУ (ADAPTIVE BACKGROUND) --- */
+/* ---------------------------------------------------- */
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Світлий режим (за замовчуванням) */
+.animated-background {
+    background: linear-gradient(-45deg, 
+        var(--gradient-light-1), 
+        var(--gradient-light-2), 
+        var(--gradient-light-3), 
+        var(--gradient-light-4)
+    );
+    background-size: var(--animation-size) var(--animation-size);
+    animation: gradient-shift var(--animation-duration) ease infinite;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* ---------------------------------------------------- */
+/* --- 8. АДАПТИВНІСТЬ ТА ТЕМНА ТЕМА --- */
+/* ---------------------------------------------------- */
+
+/* Адаптивність */
+@media (max-width: 992px) {
+    .container {
+        padding: 0 var(--spacing-unit);
+    }
+    h1 { font-size: 2rem; }
+}
+
+@media (max-width: 600px) {
+    body { font-size: 15px; }
+    .grid-layout { grid-template-columns: 1fr; }
+    .flex-group { flex-direction: column; align-items: stretch; }
+    .btn { width: 100%; }
+}
+
+/* Темна Тема (додається клас .dark-mode до body) */
+.dark-mode {
+    --text-dark: #FAFAFA; /* Білий текст */
+    --text-light: #212121;
+    --background-light: #303030;
+    --background-dark: #212121;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+}
+
+/* Перевизначення кольорів анімації для ТЕМНОГО РЕЖИМУ */
+.dark-mode.animated-background {
+    background: linear-gradient(-45deg, 
+        var(--gradient-dark-1), 
+        var(--gradient-dark-2), 
+        var(--gradient-dark-3), 
+        var(--gradient-dark-4)
+    );
+    background-size: var(--animation-size) var(--animation-size);
+}
+
+.dark-mode a { color: var(--accent-color); }
+
+.dark-mode .card {
+    background-color: var(--background-dark);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* !!! ВИПРАВЛЕННЯ КОНТРАСТУ ТАБЛИЦІ У ТЕМНІЙ ТЕМІ !!! */
+.dark-mode .styled-table {
+    color: var(--text-dark); /* Білий текст */
+}
+
+.dark-mode .styled-table tbody tr {
+    border-bottom: 1px solid #444444;
+    background-color: var(--background-light);
+}
+
+.dark-mode .styled-table tbody tr:nth-of-type(even) {
+    background-color: #383838;
+}
+
+.dark-mode .styled-table tbody tr:hover {
+    background-color: #505050; /* Темно-сірий при наведенні */
+    color: var(--accent-color); /* Акцентний колір тексту */
+}
+    </style>
+    <div class="container">
+        <div class="card">
+            <h1>Чорнобильська атомна електростанція (ЧАЕС)</h1>
+        </div><br>
+
+        <hr><br>
+
+        <div class="card">
+            <h2>Загальна інформація</h2>
+            <p>Чорнобильська атомна електростанція (ЧАЕС) — це атомна електростанція, розташована поблизу міста
+                Прип'ять, у
+                Київській області, Україна. Вона була однією з найбільших атомних електростанцій у світі. ЧАЕС
+                складалася з
+                4 енергоблоків із реакторами типу РБМК-1000.</p>
+        </div><br>
+
+        <hr><br>
+
+        <div class="card">
+            <h2>Історія будівництва</h2>
+            <ul>
+                <li>Будівництво почалося у 1970 році.</li>
+                <li>Перший енергоблок запущено у 1977 році.</li>
+                <li>Другий блок — у 1978 році.</li>
+                <li>Третій блок — у 1981 році.</li>
+                <li>Четвертий блок — у 1983 році.</li>
+            </ul>
+        </div><br>
+
+        <hr><br>
+
+        <div class="card">
+            <h2>Катастрофа 1986 року</h2>
+            <p>26 квітня 1986 року на ЧАЕС стався вибух на четвертому енергоблоці, що призвело до масштабної радіаційної
+                аварії. Вибух відбувся під час проведення тестування системи безпеки.</p>
+        </div><br>
+
+        <hr><br>
+
+        <div class="card">
+            <h3>Причини аварії</h3>
+            <ol>
+                <li>Недоліки конструкції реактора РБМК.</li>
+                <li>Порушення технологічного регламенту під час тестування.</li>
+                <li>Недостатня підготовка персоналу.</li>
+            </ol>
+        </div><br>
+
+        <hr><br>
+
+        <div class="card">
+            <h3>Наслідки</h3>
+            <p>Наслідки катастрофи були масштабні як для України, так і для багатьох інших країн:</p>
+            <ul>
+                <li>Смерть 31 людини безпосередньо від аварії.</li>
+                <li>Більше 600 тисяч ліквідаторів залучені до ліквідації наслідків.</li>
+                <li>Величезні території забруднені радіацією (зона відчуження — приблизно 30 км навколо станції).</li>
+                <li>Сотні тисяч людей евакуйовані з забруднених територій.</li>
+            </ul>
+        </div><br>
+
+        <hr><br>
+
+        <div class="card">
+            <h2>Зона відчуження</h2>
+            <p>Після аварії була створена 30-кілометрова зона відчуження навколо станції. Вона залишається малонаселеною
+                і
+                під суворим контролем, але також стала домівкою для дикої природи.</p>
+
+            <h2>Ліквідаційні роботи</h2>
+            <p>Ліквідація наслідків аварії включала:</p>
+            <ul>
+                <li>Будівництво саркофагу над четвертим енергоблоком для ізоляції радіації.</li>
+                <li>Вивезення та утилізація забруднених матеріалів.</li>
+                <li>Дезактивація територій у прилеглих районах.</li>
+            </ul>
+        </div><br>
+
+        <hr><br>
+
+        <div class="card">
+            <h2>Сучасний стан</h2>
+            <p>На сьогодні ЧАЕС частково законсервована, частина енергоблоків ще працювала до 2000 року. Збудовано новий
+                безпечний конфайнмент (Новий саркофаг) над четвертим енергоблоком, який завершили у 2016 році.</p>
+
+            <h2>Вплив на здоров'я</h2>
+            <p>Радіаційне забруднення вплинуло на здоров'я людей у різних регіонах:</p>
+            <ul>
+                <li>Підвищений рівень захворювань щитоподібної залози, особливо у дітей.</li>
+                <li>Зростання кількості онкологічних захворювань серед населення, що проживало у забруднених районах.
+                </li>
+                <li>Психологічні та соціальні наслідки для евакуйованих людей.</li>
+            </ul>
+        </div><br>
+
+        <hr><br>
+
+        <div class="card">
+            <h2>Цікаві факти</h2>
+            <ul>
+                <li>Місто Прип'ять було спеціально побудоване для працівників ЧАЕС і евакуйоване після аварії.</li>
+                <li>Тварини і рослини в зоні відчуження процвітають через відсутність людей.</li>
+                <li>Зона відчуження стала туристичною локацією для відвідувачів під контролем гідів.</li>
+                <li>ЧАЕС є символом ядерної безпеки у світі.</li>
+            </ul>
+        </div><br>
+
+        <hr><br>
+
+        <div class="card">
+            <h2>Технічні характеристики</h2>
+            <table border="1" class="styled-table">
+                <tr>
+                    <th>Параметр</th>
+                    <th>Значення</th>
+                </tr>
+                <tr>
+                    <td>Тип реактора</td>
+                    <td>РБМК-1000</td>
+                </tr>
+                <tr>
+                    <td>Кількість енергоблоків</td>
+                    <td>4 (повністю введено в експлуатацію)</td>
+                </tr>
+                <tr>
+                    <td>Потужність одного блоку</td>
+                    <td>1000 МВт</td>
+                </tr>
+                <tr>
+                    <td>Місто поруч</td>
+                    <td>Прип'ять</td>
+                </tr>
+            </table>
+        </div><br>
+
+        <hr><br>
+
+        <div class="card">
+            <h2>Відео з YouTube про ЧАЕС</h2>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/KpGdCjJUoRs"
+                title="The Story of Chernobyl (Short)" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted‑media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p>Хм схоже щось пішло не так</p>
+
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/UrbTTrgLB5A"
+                title="Journey Inside Chernobyl’s Exclusion Zone" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted‑media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p>Хм схоже щось пішло не так</p>
+        </div><br>
+
+        <hr><br>
+
+        <div class="card">
+            <h2>Тест: Чорнобильська АЕС</h2>
+
+            <form id="chernobyl-test" class="form-group">
+                <p>1. У якому році сталася аварія на ЧАЕС?</p>
+                <input type="radio" id="q1a" name="q1" value="1986">
+                <label for="q1a">1986</label><br>
+                <input type="radio" id="q1b" name="q1" value="1984">
+                <label for="q1b">1984</label><br>
+                <input type="radio" id="q1c" name="q1" value="1989">
+                <label for="q1c">1989</label><br>
+
+                <p>2. Який енергоблок вибухнув під час аварії?</p>
+                <input type="radio" id="q2a" name="q2" value="1">
+                <label for="q2a">Перший</label><br>
+                <input type="radio" id="q2b" name="q2" value="4">
+                <label for="q2b">Четвертий</label><br>
+                <input type="radio" id="q2c" name="q2" value="3">
+                <label for="q2c">Третій</label><br>
+
+                <p>3. Яке місто побудували для працівників ЧАЕС?</p>
+                <input type="radio" id="q3a" name="q3" value="Припять">
+                <label for="q3a">Прип'ять</label><br>
+                <input type="radio" id="q3b" name="q3" value="Київ">
+                <label for="q3b">Київ</label><br>
+                <input type="radio" id="q3c" name="q3" value="Чорнобиль">
+                <label for="q3c">Чорнобиль</label><br><br>
+
+                <button type="button" onclick="checkTest()" class="btn btn-primary">Перевірити відповіді</button>
+            </form>
+
+            <p id="test-result"></p>
+        </div><br>
+
+        <script>
+            function checkTest() {
+                let score = 0;
+
+                const q1 = document.querySelector('input[name="q1"]:checked');
+                const q2 = document.querySelector('input[name="q2"]:checked');
+                const q3 = document.querySelector('input[name="q3"]:checked');
+
+                if (q1 && q1.value === "1986") score++;
+                if (q2 && q2.value === "4") score++;
+                if (q3 && q3.value === "Припять") score++;
+
+                const result = document.getElementById("test-result");
+                result.textContent = "Ви набрали " + score + " з 3 балів!";
+            }
+        </script>
+
+        <hr><br>
+
+        <div class="card">
+            <h2>Висновок</h2>
+            <p>Чорнобильська катастрофа — одна з найбільших техногенних катастроф у світі. Вона нагадує про важливість
+                безпеки ядерних об’єктів та необхідність підготовки персоналу для запобігання аваріям.</p>
+        </div>
+    </div>
+</body>
+
+</html>
