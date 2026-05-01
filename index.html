@@ -469,7 +469,7 @@
 </body>
 </html>-->
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="uk">
 
 <head>
@@ -1055,5 +1055,259 @@ a:hover {
     </div>
 </body>
 
-</html>
+</html>-->
 
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мега-Лепбук: Хімія та Фізика</title>
+    <style>
+        :root {
+            --bg-table: #d7ccc8;
+            --paper: #fffcf2;
+            --text: #2c3e50;
+            --phys-color: #3498db;
+            --chem-color: #e67e22;
+            --accent: #27ae60;
+            --card-bg: #ffffff;
+            --fact-bg: #fff9c4;
+            --border: #bdc3c7;
+        }
+
+        body.dark-mode {
+            --bg-table: #1a1a1a;
+            --paper: #2d2d2d;
+            --text: #ecf0f1;
+            --card-bg: #3d3d3d;
+            --fact-bg: #4a4a2a;
+            --border: #444;
+        }
+
+        body {
+            background-color: var(--bg-table);
+            background-image: url('https://www.transparenttextures.com/patterns/wood-pattern-minimal.png');
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.3s;
+            color: var(--text);
+        }
+
+        .theme-toggle {
+            position: sticky;
+            top: 10px;
+            z-index: 100;
+            margin-bottom: 20px;
+            padding: 10px 25px;
+            cursor: pointer;
+            border-radius: 30px;
+            border: 2px solid var(--text);
+            background: var(--paper);
+            color: var(--text);
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .lapbook {
+            background-color: var(--paper);
+            width: 100%;
+            max-width: 950px;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 12px 12px 0px rgba(0,0,0,0.1), 0 0 30px rgba(0,0,0,0.2);
+            position: relative;
+            border: 2px solid var(--border);
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 4px dashed var(--accent);
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .pocket {
+            background: var(--card-bg);
+            border: 2px solid rgba(0,0,0,0.05);
+            border-radius: 15px;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .pocket-title {
+            color: white;
+            padding: 12px;
+            margin: -20px -20px 15px -20px;
+            border-radius: 13px 13px 0 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .phys-bg { background: var(--phys-color); }
+        .chem-bg { background: var(--chem-color); }
+
+        .card {
+            background: var(--paper);
+            border-left: 5px solid var(--accent);
+            padding: 12px;
+            margin: 12px 0;
+            font-size: 0.95rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .full-width { grid-column: span 2; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid var(--border);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th { background: rgba(0,0,0,0.05); }
+
+        .sticker {
+            position: absolute;
+            background: #ff7675;
+            color: white;
+            padding: 6px 18px;
+            transform: rotate(10deg);
+            right: -15px;
+            top: -10px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+        }
+
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<button class="theme-toggle" onclick="toggleTheme()">🌓 Перемкнути режим</button>
+
+<div class="lapbook">
+    <header>
+        <h1>🔬 Досліджуємо Явища Природи</h1>
+        <p>Інтерактивний посібник для 7-го класу</p>
+    </header>
+
+    <div class="grid-container">
+        
+        <!-- Розділ Фізика -->
+        <div class="pocket">
+            <div class="pocket-title phys-bg">🔹 Фізичні явища</div>
+            <div class="sticker">Речовина та сама!</div>
+            <p>Змінюється лише форма, розмір або стан. Склад атомів лишається незмінним.</p>
+            <div class="card"><strong>Механічні:</strong> Політ літака, падіння яблука.</div>
+            <div class="card"><strong>Теплові:</strong> Утворення туману, танення снігу.</div>
+            <div class="card"><strong>Світлові:</strong> Сонячне затемнення, мерехтіння зірок.</div>
+            <div class="card"><strong>Магнітні:</strong> Орієнтація стрілки компаса.</div>
+        </div>
+
+        <!-- Розділ Хімія -->
+        <div class="pocket">
+            <div class="pocket-title chem-bg">🔸 Хімічні явища</div>
+            <div class="sticker">Реакція!</div>
+            <p>В результаті утворюються нові речовини з іншими властивостями.</p>
+            <div class="card">🌡️ <strong>Екзотермічні:</strong> Виділення тепла (горіння).</div>
+            <div class="card">❄️ <strong>Ендотермічні:</strong> Поглинання тепла.</div>
+            <div class="card">🧪 <strong>Осад:</strong> Помутніння вапняної води від дихання.</div>
+            <div class="card">🎨 <strong>Колір:</strong> Посиніння крохмалю від йоду.</div>
+        </div>
+
+        <!-- Порівняльна таблиця -->
+        <div class="pocket full-width">
+            <div class="pocket-title" style="background: var(--text);">📊 Головні відмінності</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Характеристика</th>
+                        <th>Фізичне явище</th>
+                        <th>Хімічне явище</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Утворення нових речовин</td>
+                        <td>Ніколи</td>
+                        <td>Завжди</td>
+                    </tr>
+                    <tr>
+                        <td>Зміна агрегатного стану</td>
+                        <td>Часто (лід-вода)</td>
+                        <td>Рідше</td>
+                    </tr>
+                    <tr>
+                        <td>Оборотність</td>
+                        <td>Зазвичай можна повернути</td>
+                        <td>Зазвичай незворотне</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Секція Питання -->
+        <div class="pocket full-width" style="border-left: 10px solid var(--accent);">
+            <h3>❓ Бліц-опитування</h3>
+            <details>
+                <summary>Чому дифузія — це фізичне явище?</summary>
+                <div class="card">Тому що молекули просто перемішуються, але не перетворюються на інші молекули.</div>
+            </details>
+            <details>
+                <summary>Яке явище відбувається при ржавінні заліза?</summary>
+                <div class="card">Хімічне. Залізо взаємодіє з киснем і водою, утворюючи нову речовину — іржу.</div>
+            </details>
+            <details>
+                <summary>До якого явища віднести світіння лампочки?</summary>
+                <div class="card">Фізичне (світлове та теплове). Вольфрамова нитка розжарюється, але не згорає.</div>
+            </details>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>💻 Проєкт розроблено: <strong>Хоченковом В'ячеславом (7-В)</strong></p>
+        <p>Спеціально для уроку Хімії | 2026</p>
+    </footer>
+</div>
+
+<script>
+    function toggleTheme() {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+</script>
+
+</body>
+</html>
